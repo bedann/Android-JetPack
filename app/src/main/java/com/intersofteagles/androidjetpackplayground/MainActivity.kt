@@ -7,6 +7,7 @@ import com.intersofteagles.androidjetpackplayground.databinding.ActivityMainBind
 
 class MainActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -15,4 +16,19 @@ class MainActivity : AppCompatActivity() {
         binding.user = User("Jack", "Reacher", "Male")
 
     }
+
+
+    //This function checks if any two numbers in the array provided can add up to the specified sum
+    public fun canAddUp(numbers:IntArray, sum:Int):Boolean{
+        numbers.forEachIndexed { index, x ->
+            numbers.forEachIndexed { index2, y ->
+                if(index2 != index){
+                    val result = x + y
+                    if(result == sum)return true
+                }
+            }
+        }
+        return false
+    }
+
 }
