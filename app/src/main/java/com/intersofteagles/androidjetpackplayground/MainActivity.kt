@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
     //This function checks if any two numbers in the array provided can add up to the specified sum
-    public fun canAddUp(numbers:IntArray, sum:Int):Boolean{
+    fun canAddUp(numbers:IntArray, sum:Int):Boolean{
         numbers.forEachIndexed { index, x ->
             numbers.forEachIndexed { index2, y ->
                 if(index2 != index){
